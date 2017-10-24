@@ -8,6 +8,7 @@ pages:
     - 标准接入协议: 
       - 设备标准接入协议: general/device/index.md
       - 应用标准接入协议: general/app/index.md
+      - JSSDK API接口说明: general/jssdk/index.md
     - 业务场景接入协议:
-      - 考勤接入协议:  business/KQ/index.md
-      - 智能翻页笔接入协议: business/PPT/index.md
+      - 云考勤接入协议:  business/KQ/index.md
+      - 智能会议笔接入协议: business/PPT/index.md
