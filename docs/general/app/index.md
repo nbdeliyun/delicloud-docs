@@ -751,8 +751,8 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
 
 应用服务接入分测试环境和发布环节两种:
 
-    1.  测试环境:  http://t.cloudapp.delicloud.com
-    2.  正式环境:  http://cloudapp.delicloud.com
+    1.  测试环境:  http://t.cloudapp.delicloud.com/gateway
+    2.  正式环境:  http://cloudapp.delicloud.com/gateway
 
 ## 其它
 
