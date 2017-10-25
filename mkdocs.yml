@@ -9,6 +9,9 @@ pages:
       - 设备标准接入协议: general/device/index.md
       - 应用标准接入协议: general/app/index.md
       - JSSDK API接口说明: general/jssdk/index.md
+      - 网络配置协议:
+        - 蓝牙设备网络配置协议: general/network/ble/index.md
+        - Wifi设备网络配置协议: general/network/wifi/index.md
     - 业务场景接入协议:
       - 云考勤接入协议:  business/KQ/index.md
       - 智能会议笔接入协议: business/PPT/index.md
