@@ -128,13 +128,13 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 |device|设备ID|
 |status|设备状态。包括未联网（-1）、接入平台成功（0）、接入失败（1）、已绑定（2）|
 |error|更多错误描述信息，设备自定义|
-|group|绑定组织ID，可选|
+|org_id|绑定组织ID，可选|
 
-设备接入平台如果成功，设备可以选择主动通过接口查询[指令102](#102)查询设备绑定状态，如果已绑定，可以将group信息填充到二维码中。设备本地不建议存储任何绑定信息，以免造成数据不一致。
+设备接入平台如果成功，设备可以选择主动通过接口查询[指令102](#102)查询设备绑定状态，如果已绑定，可以将`org_id`信息填充到二维码中。设备本地不建议存储任何绑定信息，以免造成数据不一致。
 
 生成二维码示例(一台已绑定组织ID为1000的设备):
 
-** `http://qr.delicloud.com?from=device&action=activate&product={产品型号}&device={设备ID}&status=2&group=1000` **
+** `http://qr.delicloud.com?from=device&action=activate&product={产品型号}&device={设备ID}&status=2&org_id=1000` **
 
 **(2)对于通过与App进行蓝牙或者Wifi通信的设备: **
 
@@ -321,10 +321,10 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
     "data": {
         "code": 0, 
         "status": 1,
-        "group_id": 绑定组织ID, 
+        "org_id": 绑定组织ID, 
         "name": "组织名称", 
         "logo": "组织logo URL地址",
-        "group_admin": {
+        "org_admin": {
             "user_id": "组织管理员ID", 
             "name": "姓名", 
             "empno": "工号", 
@@ -342,14 +342,14 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 |属性|描述|
 |----|----|
 |status|设备状态: 0锁定、1正常|
-|group_id|设备已绑定组织ID，如果未绑定，则为空|
+|org_id|设备已绑定组织ID，如果未绑定，则为空|
 |name|组织名称，如果未绑定，则为空|
 |logo|组织LOGO图片URL|
-|group_admin|组组管理员信息|
+|org_admin|组组管理员信息|
 |product_version|设备产品固件最新版本|
 |last_access|上次接入时间（精确到秒), 初次接入为0|
 
-注意： 如果`group_id`信息为空或者与本地缓存的`group_id`信息不一致，可能是平台已解绑该设备，此时设备应及时清理所有本地业务数据，恢复出厂数据状态。
+注意： 如果`org_id`信息为空或者与本地缓存的`org_id`信息不一致，可能是平台已解绑该设备，此时设备应及时清理所有本地业务数据，恢复出厂数据状态。
 
 另外，如果平台固件版本与本地版本不一致，设备应通过[指令103](#103)主动查询平台最新固件版本信息进行升级。
 
@@ -557,7 +557,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
     "time": 1502867086, 
     "action": 203, 
     "data": {
-        "group_id": xxxxxx, 
+        "org_id": 组织ID, 
         "name": "组织名称", 
         "status": 0|1
     }
@@ -602,7 +602,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
     "action": 205, 
     "data": {
         "status": 0|1|2, 
-        "user_id": "用户ID", 
+        "user_id": 用户ID, 
         "name": "用户姓名", 
         "mobile": "手机号码", 
         "avatar": "用户头像URL", 
