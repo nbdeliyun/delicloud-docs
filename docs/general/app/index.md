@@ -124,10 +124,23 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
         "group_id": "用户组织ID",
         "name": "组织名称",
         "logo": "组织logo URL地址",
+        "group_admin": {
+            "user_id": "组织管理员ID", 
+            "name": "姓名", 
+            "empno": "工号", 
+            "avatar": "头像URL"
+        },
     }
 }
 ```
-其中，`group_id`表示应用安装的目标用户组织。
+其中`data`部分的各属性说明如下:
+
+|属性|描述|
+|----|----|
+|group_id|应用绑定组织ID|
+|name|组织名称|
+|logo|组织LOGO图片URL|
+|group_admin|组组管理员信息|
 
 + #### <span id="401">应用卸载401</span>
 
@@ -503,10 +516,13 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
     "time": 1503025335, 
     "data": {
         "user_id": "用户ID", 
+        "client_id": "授权客户端id"
         "token": "用户token"
     } 
 }
 ```
+其中，`client_id`代表的是当前用户操作需要授权的客户端设备或APP的唯一ID。
+
 如果鉴权成功，则返回用户的相关信息:
 ```json
 {

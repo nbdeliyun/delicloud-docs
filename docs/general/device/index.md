@@ -322,6 +322,14 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
         "code": 0, 
         "status": 1,
         "group_id": 绑定组织ID, 
+        "name": "组织名称", 
+        "logo": "组织logo URL地址",
+        "group_admin": {
+            "user_id": "组织管理员ID", 
+            "name": "姓名", 
+            "empno": "工号", 
+            "avatar": "头像URL"
+        },
         "last_access": 上次接入时间（秒）, 
         "product_version": "最新固件版本号"
     }
@@ -335,6 +343,9 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 |----|----|
 |status|设备状态: 0锁定、1正常|
 |group_id|设备已绑定组织ID，如果未绑定，则为空|
+|name|组织名称，如果未绑定，则为空|
+|logo|组织LOGO图片URL|
+|group_admin|组组管理员信息|
 |product_version|设备产品固件最新版本|
 |last_access|上次接入时间（精确到秒), 初次接入为0|
 
