@@ -516,7 +516,7 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
     "time": 1503025335, 
     "data": {
         "user_id": "用户ID", 
-        "client_id": "授权客户端id"
+        "client_id": "授权客户端id",
         "token": "用户token"
     } 
 }
