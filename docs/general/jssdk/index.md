@@ -465,6 +465,40 @@ deli.app.user.get({"user_id":349944153787858944},function(data){},function(resp)
 
 失败时返回具体错误码和错误描述.
 
++ #### 获取组织信息（app.organization.get）
+应用需要获取组织信息时调用; 如果`org_id`为空，则返回当前组织信息.
+```javascript
+deli.app.organization.get({"org_id":349944153787858944},function(data){},function(resp){});
+```
+请求参数说明如下:
+
+|请求参数|说明|
+|----|----|
+|org_id|用户组织ID|
+
+正确时返回示例如下:
+```json
+{
+    "data":{
+        "organization":{
+            "id": "349944153787858944",
+            "name": "组织名称",
+            "type": "组织类型:企业或个人",
+            "icon": "组织图标URL",
+        }
+    }
+}
+```
+响应参数说明如下:
+
+|响应参数|说明|
+|----|----|
+|data|响应数据|
+|organization|组织信息: *<br>id:组织ID,<br>name:组织名称,<br>icon:组织图标URL*|
+
+失败时返回具体错误码和错误描述.
+
+
 + #### 打电话（app.user.telephoneCall）
 应用使用过程中,需要打电话给某个指定用户时调用;
 ```javascript

@@ -175,14 +175,14 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 平台自定义数据格式都通过MQTT数据包的Payload消息体部分来设计。所有发送和接收到的Payload消息体都是以JSON数据格式存储的字符串，编码格式统一为**UTF-8**。数据格式如下:
 
 ``` json
-    {
-        "mid": "消息ID", 
-        "from": "发送者ID", 
-        "to": "接收者ID或空", 
-        "time": 操作时间（秒）, 
-        "action": 操作指令, 
-        "data": {具体消息内容 }
-    }
+{
+    "mid": "消息ID", 
+    "from": "发送者ID", 
+    "to": "接收者ID或空", 
+    "time": 操作时间（秒）, 
+    "action": 操作指令, 
+    "data": {具体消息内容 }
+}
 ```
 
 
