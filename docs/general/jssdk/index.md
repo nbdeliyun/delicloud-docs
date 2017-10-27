@@ -461,7 +461,7 @@ deli.app.user.get({"user_id":349944153787858944},function(data){},function(resp)
 |----|----|
 |data|响应数据|
 |user|用户信息: *<br>id:用户ID,<br>name:用户名称,<br>avatar:用户头像,<br>gender:用户性别,1是男性,0是女性,<br>birthday:用户生日*|
-|organization|所属组织信息: *<br>id:所属组织ID,<br>name:所属组织名称,<br>icon:所属组织图标URL,<br>is_admin:是否是该组织管理员;*|
+|organization|所属组织信息: *<br>id:所属组织ID,<br>name:所属组织名称,<br>type:组织类型,<br>icon:所属组织图标URL,<br>is_admin:是否是该组织管理员;*|
 
 失败时返回具体错误码和错误描述.
 
@@ -494,7 +494,7 @@ deli.app.organization.get({"org_id":349944153787858944},function(data){},functio
 |响应参数|说明|
 |----|----|
 |data|响应数据|
-|organization|组织信息: *<br>id:组织ID,<br>name:组织名称,<br>icon:组织图标URL*|
+|organization|组织信息: *<br>id:组织ID,<br>name:组织名称,<br/>type:组织类型<br>icon:组织图标URL*|
 
 失败时返回具体错误码和错误描述.
 
