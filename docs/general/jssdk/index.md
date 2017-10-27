@@ -494,7 +494,7 @@ deli.app.organization.get({"org_id":349944153787858944},function(data){},functio
 |响应参数|说明|
 |----|----|
 |data|响应数据|
-|organization|组织信息: *<br>id:组织ID,<br>name:组织名称,<br/>type:组织类型<br>icon:组织图标URL*|
+|organization|组织信息: *<br>id:组织ID,<br>name:组织名称,<br/>type:组织类型,<br>icon:组织图标URL*|
 
 失败时返回具体错误码和错误描述.
 
@@ -545,6 +545,7 @@ function(data){},function(resp){});
 
 |请求参数|说明|
 |title|页面标题|
+|----|----|
 |mode|必填,选择模式,single表示单选,multi表示多选|
 |root_dept_id|设置可选顶级部门的ID|
 |max|选择人数限制|
