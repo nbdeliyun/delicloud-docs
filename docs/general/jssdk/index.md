@@ -544,8 +544,8 @@ function(data){},function(resp){});
 请求参数说明如下:
 
 |请求参数|说明|
-|title|页面标题|
 |----|----|
+|title|页面标题|
 |mode|必填,选择模式,single表示单选,multi表示多选|
 |root_dept_id|设置可选顶级部门的ID|
 |max|选择人数限制|
