@@ -172,11 +172,18 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
     "data": {
         "org_id": "组织ID", 
         "device_id": "设备ID", 
-        "device_name": "设备名称", 
-        "product": "产品型号", 
-        "product_type": "设备业务类型", 
-        "icon": "设备图标URL地址", 
-        "product_features": [ ]
+        "name": "设备名称", 
+        "status": 0|1,
+        "product": {
+            "model": "产品型号", 
+            "name": "产品名称", 
+            "type": "产品类型", 
+            "icon": "产品图标URL地址", 
+            "features": [ {
+                "type": "特征类型",
+                "value": "特征参数值",
+            }]
+        }
     }
 }
 ```
@@ -186,11 +193,9 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
 |----|----|
 |org_id|设备所属组织ID|
 |device_id|设备ID|
-|device_name|设备名称|
-|product|产品型号|
-|product_type|产品类型|
-|icon|产品图标|
-|product_features|产品特征列表，例如设备支持人脸、指纹考勤等|
+|name|设备名称|
+|status|设备状态，0表示离线，1表示在线|
+|product|产品信息。包括: *<br>model:产品型号,<br>name:产品名称, <br>type:产品类型,<br>icon:产品图标URL,<br>features:产品特征列表，包括特征类型type（例如支持人脸、指纹），特征参数value（例如人脸算法版本等）*|
 
 
 + #### <span id="403">设备解绑403</span>
@@ -601,7 +606,7 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
     "data": {
         "org_id": 用户组织ID, 
         "update_time": -1, 
-        "target": “dept|user”, 
+        "target": "dept|user", 
         "size": 100
     }
 }
@@ -704,13 +709,19 @@ WebHook接口调用是否成功以HTTP响应状态码来判断。如果是200则
     "time": 1503025335, 
     "data": {
         "org_id": "组织ID", 
-        "device_id": "设备ID", 
-        "device_name": "设备名称", 
-        "device_status": 0|1,
-        "product": "产品型号", 
-        "product_type": "设备业务类型", 
-        "icon": "设备图标URL地址", 
-        "product_features": [ ]
+        "device_id": "设备ID",
+        "status": 0|1, 
+        "name": "设备名称", 
+        "product": {
+            "model": "产品型号", 
+            "name": "产品名称", 
+            "type": "产品类型", 
+            "icon": "产品图标URL地址", 
+            "features": [ {
+                "type": "特征类型",
+                "value": "特征参数值",
+            }]
+        }
     }
 }
 ```

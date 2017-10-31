@@ -321,14 +321,17 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
     "data": {
         "code": 0, 
         "status": 1,
-        "org_id": 绑定组织ID, 
-        "name": "组织名称", 
-        "logo": "组织logo URL地址",
-        "org_admin": {
-            "user_id": "组织管理员ID", 
-            "name": "姓名", 
-            "empno": "工号", 
-            "avatar": "头像URL"
+        "name": "设备名称",
+        "organization" : {
+            "org_id": 绑定组织ID, 
+            "name": "组织名称", 
+            "logo": "组织logo URL地址",
+            "admin": {
+                "user_id": "组织管理员ID", 
+                "name": "姓名", 
+                "empno": "工号", 
+                "avatar": "头像URL"
+            }
         },
         "last_access": 上次接入时间（秒）, 
         "product_version": "最新固件版本号"
@@ -342,14 +345,12 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 |属性|描述|
 |----|----|
 |status|设备状态: 0锁定、1正常|
-|org_id|设备已绑定组织ID，如果未绑定，则为空|
-|name|组织名称，如果未绑定，则为空|
-|logo|组织LOGO图片URL|
-|org_admin|组组管理员信息|
+|name|设备名称|
+|organization| 设备组织信息。如果设备无组织，则为空。组织信息包括: *<br>org_id:设备已绑定组织ID,<br>name:组织名称,<br>logo:织LOGO图片URL,<br>admin:组织管理员信息*|
 |product_version|设备产品固件最新版本|
 |last_access|上次接入时间（精确到秒), 初次接入为0|
 
-注意： 如果`org_id`信息为空或者与本地缓存的`org_id`信息不一致，可能是平台已解绑该设备，此时设备应及时清理所有本地业务数据，恢复出厂数据状态。
+注意： 如果`org_id`信息为空或者与本地缓存的`org_id`信息不一致，可能是平台已解绑该设备，此时设备应及时清理所有本地业务数据，恢复出厂数据状态。如果平台更改了设备的名称`name`，设备也应主动更新。
 
 另外，如果平台固件版本与本地版本不一致，设备应通过[指令103](#103)主动查询平台最新固件版本信息进行升级。
 
