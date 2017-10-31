@@ -52,7 +52,7 @@ var signature = md5(str);
 deli.config({
     serviceId : "", //必填,应用ID
     timestamp : "", //必填,生成签名的时间戳
-    nonceStr : "", //必填,生成签名的随机字符串
+    noncestr : "", //必填,生成签名的随机字符串
     signature : "", //必填,签名
     jsApiList : []  //必填,所有需要使用的JS接口名称列表,JS接口名称在章节三中,例如:"["common.navigation.setTitle","common.navigation.setRight","common.navigation.close"]".
 })
