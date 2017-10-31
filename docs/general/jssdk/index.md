@@ -14,7 +14,7 @@
 
 ** `http://cdnjs.delicloud.com/delicloud.min.js` **
 
-备注:引入JS后会得到全局变量** deli **,支持使用AMD/CMD标准模块加载方法加载.
+备注:引入JS后会得到全局变量** deli **,支持使用AMD/CMD标准模块加载方法加载.  
 
 - ### 2. JSAPI初始化配置
 
