@@ -12,7 +12,7 @@
 
 在需要调用JS接口的页面引入delicloud.min.js文件,引入地址如下:
 
-** `http://cdnjs.delicloud.com/delicloud.min.js` **
+** `http://static.delicloud.com:8181/js/delicloud.min.js` **
 
 备注:引入JS后会得到全局变量** deli **,支持使用AMD/CMD标准模块加载方法加载.  
 
