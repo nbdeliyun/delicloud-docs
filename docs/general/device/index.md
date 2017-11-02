@@ -506,7 +506,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
     "mid": "123456", 
     "from": "用户ID", 
     "time": 1502867086, 
-    "action": 207, 
+    "action": 201, 
     "data": {
         "ftp_host": "ftp.delicloud.com", 
         "log_start": "日志开始日期或空",
