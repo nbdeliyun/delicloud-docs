@@ -20,7 +20,7 @@
 
 + #### JSAPI初始化过程
 
-    * 注册应用,应用服务端从得力云平台获取`serviceId`和`seviceKey`,其中`serviceKey`是私密信息,应保存在应用服务器中,不得公开;
+    * 注册应用,应用服务端从得力云平台获取`appId`和`appKey`,其中`appKey`是私密信息,应保存在应用服务器中,不得公开;
     * 应用服务端在页面初始化时根据平台提供的签名算法和私密信息计算签名（具体算法见下一小节）,并将签名结果和生成签名的原参数返回给前端页面;
     * 前端页面调用**deli.config**配置接口输入应用服务器传递过来的签名信息进行平台授权验证; 注意,**deli.config**不要重复配置;
     * 平台验证应用服务器的签名信息并返回验证结果.如果验证失败,SDK会调用**deli.error**方法返回错误信息,否则会调用**deli.ready**,SDK初始化完成.
@@ -29,16 +29,16 @@
 
 + #### JSAPI初始化签名算法
 
-第三方应用服务使用得力云提供的JSAPI时需要验证其调用身份.验证方法是采用简单的签名算法来完成.由于`serviceKey`是平台和应用服务之间的私密信息,通过采用相同的`serviceKey`计算出来的签名如果一致,则可证明应用服务的合法性.
+第三方应用服务使用得力云提供的JSAPI时需要验证其调用身份.验证方法是采用简单的签名算法来完成.由于`appKey`是平台和应用服务之间的私密信息,通过采用相同的`appKey`计算出来的签名如果一致,则可证明应用服务的合法性.
 签名生成的规则如下:
 
 ```javascript
-var keyArray = sort(noncestr,timestamp,serviceId,serviceKey);
+var keyArray = sort(noncestr,timestamp,appId,appKey);
 var str = assemble(keyArray);
 var signature = md5(str);
 ```
 
-参与签名的字段包括在上文中获取的`serviceId`, `noncestr`（随机字符串）,`timestamp`（当前时间戳,具体值为当前时间到1970年1月1号的秒数）.
+参与签名的字段包括在上文中获取的`appId`, `noncestr`（随机字符串）,`timestamp`（当前时间戳,具体值为当前时间到1970年1月1号的秒数）.
 具体的计算过程描述如下:
 
     步骤1. sort()含义为对所有待签名参数按照字段名的ASCII码从小到大排序（字典序）;
@@ -50,7 +50,7 @@ var signature = md5(str);
 **deli.config**是所有需要使用JS-SDK的页面首先需要调用的初始化配置操作.如果配置验证不成功,后续所有接口将无法使用.（注意,同一个url仅需调用一次）
 ```javascript
 deli.config({
-    serviceId : "", //必填,应用ID
+    appId : "", //必填,应用ID
     timestamp : "", //必填,生成签名的时间戳
     noncestr : "", //必填,生成签名的随机字符串
     signature : "", //必填,签名

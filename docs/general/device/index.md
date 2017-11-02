@@ -346,7 +346,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 |----|----|
 |status|设备状态: 0锁定、1正常|
 |name|设备名称|
-|organization| 设备组织信息。如果设备无组织，则为空。组织信息包括: *<br>org_id:设备已绑定组织ID,<br>name:组织名称,<br>logo:织LOGO图片URL,<br>admin:组织管理员信息*|
+|organization| 设备组织信息。如果设备无组织，则为空。组织信息包括: *<br>org_id:设备已绑定组织ID,<br>name:组织名称,<br>logo:组织LOGO图片URL,<br>admin:组织管理员信息*|
 |product_version|设备产品固件最新版本|
 |last_access|上次接入时间（精确到秒), 初次接入为0|
 
@@ -582,7 +582,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
     "time": 1502867086, 
     "action": 204, 
     "data": {
-        "service_id": xxxxx, 
+        "app_id": xxxxx, 
         "name": "服务名称", 
         "icon": "服务图标URL", 
         "status": 0|1
