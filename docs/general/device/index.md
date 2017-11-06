@@ -253,7 +253,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 
 ``` json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID",
     "to": "system",
     "time": 0, 
@@ -287,7 +287,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 
 ``` json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "system",
     "time": 1502867086, 
@@ -314,7 +314,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 平台响应消息数据格式与[指令100](#100)类似:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867044, 
@@ -334,7 +334,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "system", 
     "time": 1502867086, 
@@ -344,7 +344,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 响应消息数据格式:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867086, 
@@ -393,7 +393,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 请求消息示例如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "system", 
     "time": 1502867086, 
@@ -403,7 +403,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 响应消息数据格式:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867086, 
@@ -441,7 +441,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 请求消息示例如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "system", 
     "time": 1502867086, 
@@ -451,7 +451,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 响应消息数据为默认响应格式:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867044, 
@@ -472,7 +472,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 请求消息示例如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "system", 
     "time": 1502867086, 
@@ -498,7 +498,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 请求消息示例如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "运营人员ID", 
     "to": "设备ID", 
     "time": 1502867086, 
@@ -518,7 +518,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 设备收到命令后，应给出执行结果并返回。响应消息数据格式:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "运营人员ID", 
     "time": 1502867086, 
@@ -544,7 +544,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 请求消息示例如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867086, 
@@ -568,7 +568,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 上传成功后，设备通知平台响应消息示例如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "设备ID", 
     "to": "system", 
     "time": 1502867086, 
@@ -588,7 +588,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 通知消息格式如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "", 
     "time": 1502867086, 
     "action": 202, 
@@ -612,7 +612,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 通知消息格式如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867086, 
@@ -643,7 +643,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 通知消息格式如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867086, 
@@ -674,7 +674,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 通知消息格式如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID",
     "time": 1502867086,  
@@ -713,7 +713,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 请求消息示例如下:
 ```json
 {
-    "mid": "123456",
+    "mid": "消息ID",
     "from": "设备D", 
     "to": "应用服务ID", 
     "time": 1502867086, 
@@ -737,7 +737,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 平台会对消息进行验证，例如判断设备是否与应用存在绑定关系或者应用服务状态是否可用等。一旦验证失败，平台会停止消息转发并直接返回如下响应:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "system", 
     "to": "设备ID", 
     "time": 1502867044, 
@@ -761,7 +761,7 @@ MQTT客户端连接库可参考[链接](https://github.com/mqtt/mqtt.github.io/w
 设备收到的应用服务请求消息格式如下:
 ```json
 {
-    "mid": "123456", 
+    "mid": "消息ID", 
     "from": "应用服务ID", 
     "to": "设备ID",     
     "time": 1502867086, 
