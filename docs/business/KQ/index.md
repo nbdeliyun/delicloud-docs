@@ -101,7 +101,8 @@
                     "name": "张三", 
                     "empno": "工号", 
                     "fp": "指纹", 
-                    "fa": "人脸"
+                    "fa": "人脸",
+                    "admin": true
                 }, {
                     "user_id": 10001, 
                     "delete": true //表示删除标记
