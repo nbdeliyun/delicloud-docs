@@ -84,7 +84,7 @@ deli.error(function(resp){
     + 所有接口的调用方式是都是统一的,由三个参数组成.第一个参数是一个object类型,表示请求参数信息,第二个参数是成功回调函数,第三个参数是失败回调函数.示例如下:
 
 ```javascript
-deli.common(模块分类).function(功能).method(方法)(
+deli.module(模块分类).function(功能).method(方法)(
     {}, //第一个参数,object类型
 function(data){
     //第二个参数,成功回调
