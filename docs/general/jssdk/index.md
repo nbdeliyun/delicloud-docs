@@ -173,7 +173,7 @@ deli.common.notification.hidePreloader();
 ```javascript
 deli.common.notification.toast({
     "text": "提示信息", //提示信息
-    "duration": 5, //提示时间,单位为秒
+    "duration": 5 //提示时间,单位为秒
 },function(data){},function(resp){});
 ```
 请求参数说明如下:
